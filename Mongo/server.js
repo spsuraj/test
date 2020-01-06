@@ -17,7 +17,7 @@ app.get('/api/contacts', (request,response)=>{
 });
 
 app.get('/api/contacts/:id',(request,response) => {
-    
+    debugger
     const requestId = request.params.id;
 
     let contact = contacts.filter(contact => {
@@ -72,7 +72,7 @@ app.put('/api/contacts/:id',(request,response) => {
 });
 
 app.delete('api/contacts/:id',(request,response) => {
-
+debugger
     const requestId = request.params.id;
 
     let contact = contacts.filter(contact => {
@@ -83,7 +83,7 @@ app.delete('api/contacts/:id',(request,response) => {
 
     contacts.splice(index, 1);
 
-    respose.json({message:`User with ${requestId} is deleted `});
+    response.json({message:`User with ${requestId} is deleted `});
 
 });
 
